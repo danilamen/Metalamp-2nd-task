@@ -19,6 +19,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset",
+      },
+      {
         test: /\.css$/i,
         use: [
           mode === "production" ? MiniCssExtractPlugin.loader : "style-loader",
